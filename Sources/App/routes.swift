@@ -6,7 +6,15 @@ public func routes(_ router: Router) throws {
     router.get("hello") { req in
         return "Hello, world!"
     }
-
+    
+    //router.websocket("ping") { (req, ws) in
+    //    ws.onString({ (ws, msg) in
+    //        if msg == "ping" {
+    //            ws.send(string: "pong")
+    //       }
+    //    })
+    //}
+    
     // Example of configuring a controller
     let todoController = TodoController()
     router.get("todos", use: todoController.index)
